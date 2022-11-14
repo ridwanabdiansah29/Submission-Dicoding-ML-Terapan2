@@ -75,16 +75,36 @@ Karena dari hasil output di atas menunjukkan bahwa tidak ada missing value pada 
 
 ## Modeling
 
-### Rekomendasi dengan Cosine Similarity
+Proses modeling yang saya lakukan pada data ini adalah dengan membuat algoritma machine learning, yaitu content based filtering untuk algoritma content based filtering saya buat dengan apa yang disukai pengguna pada masa lalu.
+Pada dataset  dibuat dibagian fitur genre menjadi satu jenis genre untuk satu judul film karena akan membuat rekomendasi akan maksimal.
 
 Tabel 4.
+|name|fi|space|shounen|power|psychological|shoujo|josei|drama|mystery|mecha|
+|---|---|---|---|---|---|---|---|---|---|---|
+|Cleopatra D\.C\.|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Meiken Jolie|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Keroro Gunsou|0\.0|0\.0|1\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Tonari no Tamageta-kun|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|RPG Densetsu Hepoi|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Mo Jing Lieren 3rd Season|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Chibi Kero: Kerobouru no Himitsu\!?|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Vampire Hunter D|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+|Kiss Dum: Engage Planet|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|1\.0|
+|Doraemon \(2005\)|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
+
+Tabel 4. merupakan hasil processing dataset agar mencapai akurasi 100%
+
+## Result
+### Rekomendasi dengan Cosine Similarity
+
+Tabel 5.
 No | anime_id | name | genre
 -- | -------- | ---- | -----
 477 | 14353 | Death Billiards | Psychological
 
-Tabel 4. merupakan contoh film yang di tonton pengguna di masa lalu.
+Tabel 5. merupakan contoh film yang di tonton pengguna di masa lalu.
 
-Tabel 5.
+Tabel 6.
 |index|name|genre|
 |---|---|---|
 |0|DRAMAtical Murder|Psychological|
@@ -98,11 +118,11 @@ Tabel 5.
 |8|Chikotan|Psychological|
 |9|Great Rabbit|Psychological|
 
-Tabel 5. merupakan hasil rekomendasi dari cosine similarity.
+Tabel 6. merupakan hasil rekomendasi dari cosine similarity.
 
 ### Rekomendasi dengan Euclidean Similarity
 
-Tabel 6.
+Tabel 7.
 No | anime_id | name | genre
 -- | -------- | ---- | -----
 2727 | 2369 | Rental Magica | Mystery
@@ -125,7 +145,7 @@ Tabel 7. merupakan hasil rekomendasi dari euclidean similarity.
 
 ## Evaluation
 
-## Komaparasi  Waktu Eksekusi
+## Komparasi  Waktu Eksekusi
 Tabel 8.
 No|Cosine Similarity|Euclidean Similarity|
 --|-----------------|--------------------|
@@ -135,7 +155,7 @@ Tabel 8 merupakan hasil dari komparasi waktu eksekusi. dilihat dari output yang 
 
 ## Kesimpulan
 
-Pada kesimpulan ini didapatkan bahwa teknik cosine similarity dan teknik Euclidean Similarity sama-sama mendapatkan presisi yang akurat 100% dari percobaan hasil 9 output namun pada hal kecepatan waktu komparasi eksekusi teknik cosine similarity lebih unggul dari teknik Euclidean similarity.
+dataset harus di proses terlebih dahulu dengan menggunakan TF-IDF Vectorizer yang berguna untuk menentukan nilai frekuensi suatu kata di dalam sebuah dataset. kemudian dilanjutkan dengan Melakukan perhitungan idf pada fitur genre dan Mapping array dari fitur index integer ke fitur nama. lalu Melakukan fit lalu ditransformasikan ke bentuk matrix. selanjutnya Mengubah vektor tf-idf dalam bentuk matriks dengan fungsi todense(). Dari hasil proses sebelumnya dijalankan diketahui bahwa teknik cosine similarity dan teknik Euclidean Similarity sama-sama mendapatkan presisi yang akurat 100% dari percobaan hasil 9 output namun pada hal kecepatan waktu komparasi eksekusi teknik cosine similarity lebih unggul dari teknik Euclidean similarity.
 
 ## Referensi
 
