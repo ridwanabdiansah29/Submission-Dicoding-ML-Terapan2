@@ -80,25 +80,62 @@ Karena dari hasil output di atas menunjukkan bahwa tidak ada missing value pada 
 Tabel 4.
 No | anime_id | name | genre
 -- | -------- | ---- | -----
-477 | 14353 | Death Billiards | Drama
+477 | 14353 | Death Billiards | Psychological
 
 Tabel 4. merupakan contoh film yang di tonton pengguna di masa lalu.
 
 Tabel 5.
-No | name |	genre
--- | ---- | -----
-0 |	Kurumiwari Ningyou	Drama
-1	Momoko, Kaeru no Uta ga Kikoeru yo.	Drama
-2	Soukyuu no Fafner: Dead Aggressor	Drama
-3	Karasu Tengu Kabuto	Drama
-4	Kyoushoku Soukou Guyver II	Drama
-5	Plastic Memories	Drama
-6	Koe wo Kikasete	Drama
-7	Mobile Suit Gundam ZZ	Drama
-8	Perrine Monogatari Movie	Drama
-9	Futatsu no Kurumi	Drama
+|index|name|genre|
+|---|---|---|
+|0|DRAMAtical Murder|Psychological|
+|1|Himitsu: The Revelation|Psychological|
+|2|Mind Game|Psychological|
+|3|Eikyuu Kazoku|Psychological|
+|4|Born by Myself|Psychological|
+|5|Paradise|Psychological|
+|6|Fujimi 2-choume Koukyougakudan|Psychological|
+|7|Kakari|Psychological|
+|8|Chikotan|Psychological|
+|9|Great Rabbit|Psychological|
+
+Tabel 5. merupakan hasil rekomendasi dari cosine similarity.
+
+### Rekomendasi dengan Euclidean Similarity
+
+Tabel 6.
+No | anime_id | name | genre
+-- | -------- | ---- | -----
+2727 | 2369 | Rental Magica | Mystery
+
+Tabel 7.
+|index|name|genre|
+|---|---|---|
+|0|GetBackers|Mystery|
+|1|Mezzo DSA|Mystery|
+|2|Cowboy Bebop: Tengoku no Tobira|Mystery|
+|3|Gyakuten Saiban: Sono &quot;Shinjitsu&quot;, Igi Ari\!|Mystery|
+|4|Tiger &amp; Bunny Recaps|Mystery|
+|5|Higurashi no Naku Koro ni Kai|Mystery|
+|6|Kuroshitsuji: Book of Murder|Mystery|
+|7|Agatha Christie no Meitantei Poirot to Marple|Mystery|
+|8|Kono Naka ni Hitori, Imouto ga Iru\!|Mystery|
+|9|Kindaichi Shounen no Jikenbo: Shinigami Byouin Satsujin Jiken|Mystery|
+
+Tabel 7. merupakan hasil rekomendasi dari euclidean similarity.
 
 ## Evaluation
+
+## Komaparasi  Waktu Eksekusi
+Tabel 8.
+No|Cosine Similarity|Euclidean Similarity|
+--|-----------------|--------------------|
+Time (Seconds)|1.136652|3.268346
+
+Tabel 8 merupakan hasil dari komparasi waktu eksekusi. dilihat dari output yang dihasilkan untuk menghitung kecepatan komparasi waktu eksekusi didapat cosine similarity dengan nilai 1.136652 detik sedangkan euclidean similarity mendapatkan waktu 3.268346
+
+## Kesimpulan
+
+Pada kesimpulan ini didapatkan bahwa teknik cosine similarity dan teknik Euclidean Similarity sama-sama mendapatkan presisi yang akurat 100% dari percobaan hasil 9 output namun pada hal kecepatan waktu komparasi eksekusi teknik cosine similarity lebih unggul dari teknik Euclidean similarity.
 
 ## Referensi
 
