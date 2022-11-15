@@ -135,7 +135,7 @@ No | anime_id | name | genre
 -- | -------- | ---- | -----
 2727 | 2369 | Rental Magica | Mystery
 
-Tabel 7.
+Tabel 8.
 |index|name|genre|
 |---|---|---|
 |0|GetBackers|Mystery|
@@ -149,17 +149,17 @@ Tabel 7.
 |8|Kono Naka ni Hitori, Imouto ga Iru\!|Mystery|
 |9|Kindaichi Shounen no Jikenbo: Shinigami Byouin Satsujin Jiken|Mystery|
 
-Tabel 7. merupakan hasil rekomendasi dari euclidean similarity.
+Tabel 8. merupakan hasil rekomendasi dari euclidean similarity.
 
 ## Evaluation
 
 ## Komparasi  Waktu Eksekusi
-Tabel 8.
+Tabel 9.
 No|Cosine Similarity|Euclidean Similarity|
 --|-----------------|--------------------|
 Time (Seconds)|1.136652|3.268346
 
-Tabel 8 merupakan hasil dari komparasi waktu eksekusi. dilihat dari output yang dihasilkan untuk menghitung kecepatan komparasi waktu eksekusi didapat cosine similarity dengan nilai 1.136652 detik sedangkan euclidean similarity mendapatkan waktu 3.268346
+Tabel 9. merupakan hasil dari komparasi waktu eksekusi. dilihat dari output yang dihasilkan untuk menghitung kecepatan komparasi waktu eksekusi didapat cosine similarity dengan nilai 1.136652 detik sedangkan euclidean similarity mendapatkan waktu 3.268346
 
 ## Kesimpulan
 
