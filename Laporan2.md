@@ -84,8 +84,7 @@ Proses algoritma content based filtering yaitu :
 5. Mengubah vektor tf-idf dalam bentuk matriks dengan fungsi todense()
 6. Membuat dataframe untuk melihat tf-idf matrix
 7. Kolom diisi dengan genre, Baris diisi dengan nama anime
-8. 
-Pada dataset  dibuat dibagian fitur genre menjadi satu jenis genre untuk satu judul film karena akan membuat rekomendasi akan maksimal.
+8. Pada dataset dibuat dibagian fitur genre menjadi satu jenis genre untuk satu judul film karena akan membuat rekomendasi akan maksimal.
 
 Tabel 4.
 |name|fi|space|shounen|power|psychological|shoujo|josei|drama|mystery|mecha|
