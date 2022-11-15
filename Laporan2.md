@@ -76,6 +76,15 @@ Karena dari hasil output di atas menunjukkan bahwa tidak ada missing value pada 
 ## Modeling
 
 Proses modeling yang saya lakukan pada data ini adalah dengan membuat algoritma machine learning, yaitu content based filtering untuk algoritma content based filtering saya buat dengan apa yang disukai pengguna pada masa lalu.
+Proses algoritma content based filtering yaitu :
+1. Melakukan TF-IDF Vectorizer. TF-IDF Vectorizer akan digunakan pada sistem rekomendasi untuk menemukan representasi fitur penting dari setiap genre anime. Kita akan menggunakan fungsi tfidfvectorizer() dari library sklearn.
+2. Melakukan perhitungan idf pada data genre
+3. Mapping array dari fitur index integer ke fitur name
+4. Melakukan fit lalu ditransformasikan ke bentuk matrix
+5. Mengubah vektor tf-idf dalam bentuk matriks dengan fungsi todense()
+6. Membuat dataframe untuk melihat tf-idf matrix
+7. Kolom diisi dengan genre, Baris diisi dengan nama anime
+8. 
 Pada dataset  dibuat dibagian fitur genre menjadi satu jenis genre untuk satu judul film karena akan membuat rekomendasi akan maksimal.
 
 Tabel 4.
@@ -92,7 +101,7 @@ Tabel 4.
 |Kiss Dum: Engage Planet|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|1\.0|
 |Doraemon \(2005\)|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0|
 
-Tabel 4. merupakan hasil processing dataset agar mencapai akurasi 100%
+Tabel 4. merupakan hasil algoritma content based filtering
 
 ## Result
 ### Rekomendasi dengan Cosine Similarity
